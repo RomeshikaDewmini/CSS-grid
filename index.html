@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{margin: 0; padding: 0; font-family: arial;}
+        .one,.two,.three,.four,.five,.six,.seven{text-align: center}
+        .one{background-color: #3bfff7;}
+        .two{background-color: #3bff48;}
+        .three{background-color: #ff903b;}
+        .four{background-color: #ff3b3b;}
+        .five{background-color: #4f3bff;}
+        .six{background-color: #b73bff;}
+        .seven{background-color: #ff3b72;}
+            
+
+        .gridbox{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 100px;
+        }
+
+        .one{
+            grid-column-start: 1;
+            grid-column-end: 4;
+            display: inline-grid;
+        }
+        
+        .two{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 4;
+            display: inline-grid;
+        }
+
+        .seven{
+      /*      grid-column-start: 1;
+            grid-column-end: 4;*/
+            grid-column:   1 / 4;
+         /*   grid-row-start: 5;
+            grid-row-end: 6;*/
+            grid-row: auto / span 1;
+            display:inline-grid;
+
+
+        }
+
+        .six{
+            grid-column: 2/ span 2;
+            grid-row: 4/ span 3;
+        }
+        .five{
+    
+            grid-row: auto / span 3;
+        }
+
+    </style>
+
+    <div class="gridbox">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+        <div class="four">4</div>
+        <div class="five">5</div>
+        <div class="six">6</div>
+        <div class="seven">7</div>
+    </div>
+    
+</body>
+</html>
